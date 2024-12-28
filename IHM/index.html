@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de la suite de Syracuse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Suite de Syracuse</h1>
+            <p>Entrez un nombre pour calculer sa suite de Syracuse</p>
+        </header>
+        <main>
+            <form id="syracuseForm">
+                <div class="input-group">
+                    <input type="number" id="numberInput" placeholder="Entrez un nombre entier" required>
+                    <button type="submit">Calculer</button>
+                </div>
+            </form>
+            <div id="results" class="results hidden">
+                <h2>Résultats :</h2>
+                <pre id="resultsContent"></pre>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+        
