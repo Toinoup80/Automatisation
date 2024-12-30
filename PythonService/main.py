@@ -1,8 +1,8 @@
-
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+# Fonction pour calculer la suite de Syracuse
 def suite_syracuse(n):
     sequence = []
     while n != 1:
@@ -11,6 +11,12 @@ def suite_syracuse(n):
     sequence.extend([4, 2, 1])
     return sequence
 
+# Route racine pour afficher un message de bienvenue
+@app.route('/')
+def home():
+    return "Bienvenue sur le service Syracuse !", 200
+
+# Route pour calculer la suite de Syracuse
 @app.route('/syracuse', methods=['POST'])
 def calculate_syracuse():
     data = request.json
@@ -27,4 +33,3 @@ def calculate_syracuse():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
-        
