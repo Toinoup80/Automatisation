@@ -12,7 +12,6 @@ document.getElementById('syracuseForm').addEventListener('submit', async functio
         const data = await response.json();
         document.getElementById('results').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
     } catch (error) {
-        console.error('Erreur lors de l'appel au service Syracuse', error);
+        console.error("Erreur lors de l'appel au service Syracuse", error);
     }
 });
-        
